@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/im_pink_pig"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/button_pink_pig"
+            >
+        </ImageView>
+        <ImageView
+            android:id="@+id/im_frog"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/button_frog">
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/im_panda"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/button_panda">
+
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp">
+        <ImageView
+            android:id="@+id/im_mouse"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/button_mouse">
+        </ImageView>
+        <ImageView
+            android:id="@+id/im_elephant"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/button_elephant">
+        </ImageView>
+    </LinearLayout>
+
+
+</LinearLayout>
