@@ -5,4 +5,5 @@ package com.cnnp.model.common;
  */
 public class PublicTime {
     //当前时间的各种类型
+
 }

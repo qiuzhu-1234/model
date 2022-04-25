@@ -10,55 +10,97 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-        <ImageView
-            android:id="@+id/im_pink_pig"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/button_pink_pig"
-            >
-        </ImageView>
-        <ImageView
-            android:id="@+id/im_frog"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginLeft="40dp"
-            android:src="@drawable/button_frog">
-        </ImageView>
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/click_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="验证fragment">
+        </TextView>
+        <TextView
+            android:id="@+id/click_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="本地数据库">
+        </TextView>
+        <TextView
+            android:id="@+id/click_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="键盘自适应">
+        </TextView>
+        <TextView
+            android:id="@+id/click_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="时间转换">
+        </TextView>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        >
-        <ImageView
-            android:id="@+id/im_panda"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/button_panda">
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/click_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="时间控件">
+        </TextView>
+        <TextView
+            android:id="@+id/click_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="待挖掘">
+        </TextView>
+        <TextView
+            android:id="@+id/click_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="待挖掘">
+        </TextView>
+        <TextView
+            android:id="@+id/click_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="待挖掘">
+        </TextView>
 
-        </ImageView>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp">
-        <ImageView
-            android:id="@+id/im_mouse"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/button_mouse">
-        </ImageView>
-        <ImageView
-            android:id="@+id/im_elephant"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginLeft="40dp"
-            android:src="@drawable/button_elephant">
-        </ImageView>
-    </LinearLayout>
-
 
 </LinearLayout>

@@ -1,24 +1,32 @@
 package com.cnnp.model;
 
+import android.os.Build;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
 
 import com.cnnp.model.activity.AutoKeyBoardActivity;
+import com.cnnp.model.activity.CalendarUseActivity;
 import com.cnnp.model.common.BaseActivity;
 import com.cnnp.model.db.StudentInfo;
 import com.cnnp.model.db.manager.StudentInfoManager;
 import com.cnnp.model.fragment.PinkPigFragment;
 
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends BaseActivity {
 
-    private ImageView im_pink_pig;
-    private ImageView im_frog;
-    private ImageView im_panda;
-    private ImageView im_mouse;
-    private ImageView im_elephant;
+    private TextView click_1;
+    private TextView click_2;
+    private TextView click_3;
+    private TextView click_4;
+    private TextView click_5;
 
     @Override
     protected int initLayout() {
@@ -28,24 +36,24 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
 
-        im_pink_pig = findViewById(R.id.im_pink_pig);
-        im_frog = findViewById(R.id.im_frog);
-        im_panda = findViewById(R.id.im_panda);
-        im_mouse = findViewById(R.id.im_mouse);
-
+        click_1 = findViewById(R.id.click_1);
+        click_2 = findViewById(R.id.click_2);
+        click_3 = findViewById(R.id.click_3);
+        click_4 = findViewById(R.id.click_4);
+        click_5 = findViewById(R.id.click_5);
     }
 
     @Override
     protected void initDate() {
 
-        im_pink_pig.setOnClickListener(new View.OnClickListener() {//验证fragment功能使用 （闪退）
+        click_1.setOnClickListener(new View.OnClickListener() {//验证fragment功能使用 （闪退）
             @Override
             public void onClick(View view) {
                 navigateTo(PinkPigFragment.class);
             }
         });
 
-        im_frog.setOnClickListener(new View.OnClickListener() {//验证本地数据库使用
+        click_2.setOnClickListener(new View.OnClickListener() {//验证本地数据库使用
             @Override
             public void onClick(View view) {
                 StudentInfo studentInfo = new StudentInfo();
@@ -63,7 +71,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        im_panda.setOnClickListener(new View.OnClickListener() {//验证键盘自适应问题
+        click_3.setOnClickListener(new View.OnClickListener() {//验证键盘自适应问题
             @Override
             public void onClick(View view) {
                 navigateTo(AutoKeyBoardActivity.class);
@@ -71,15 +79,31 @@ public class MainActivity extends BaseActivity {
         });
 
 
-        im_mouse.setOnClickListener(new View.OnClickListener() {//验证时间转换问题
+        click_4.setOnClickListener(new View.OnClickListener() {//验证时间转换问题
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
+              //获取当前时间
+                //Date类型
+                Date time1 = new Date();
+                System.out.println("Date类型："+time1); //Tue Apr 05 10:47:11 GMT 2022
+                //Instant类型  （秒）
+                Instant time2 = Instant.now().plusMillis(TimeUnit.HOURS.toMillis(8));//2022-04-05T18:47:11.547Z
+                System.out.println("Instant类型："+time2);
+                //时间戳类型
+                Calendar calendar = Calendar.getInstance();//1649155631549
+                long time3 = calendar.getTimeInMillis();
+                System.out.println("时间戳类型:"+time3);
 
             }
         });
 
-
-
+        click_5.setOnClickListener(new View.OnClickListener() {//验证键盘自适应问题
+            @Override
+            public void onClick(View view) {
+                navigateTo(CalendarUseActivity.class);
+            }
+        });
 
     }
 //
