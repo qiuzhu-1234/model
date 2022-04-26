@@ -2,7 +2,7 @@ package com.cnnp.model.db;
 
 import android.content.Context;
 
-import com.cnnp.model.db.share.LogUtil;
+import com.cnnp.model.common.LogUtil;
 
 import java.util.List;
 
@@ -74,6 +74,17 @@ public class ModelBaseDao<T> {
             LogUtil.e(e.toString());
         }
     }
+
+    /**
+     * 单个对象更新数据（string int long）
+     *      * 先查询 再更新
+     *      *
+     *      * Student load = studentDao.load("0");
+     *      *
+     *      * load.setHobby("足球");
+     *      *
+     *      * studentDao.update(load);
+     */
 
     /**
      * 批量更新数据

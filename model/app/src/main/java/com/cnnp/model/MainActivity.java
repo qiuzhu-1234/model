@@ -10,6 +10,7 @@ import androidx.annotation.RequiresApi;
 import com.cnnp.model.activity.AutoKeyBoardActivity;
 import com.cnnp.model.activity.CalendarUseActivity;
 import com.cnnp.model.common.BaseActivity;
+import com.cnnp.model.common.LogUtil;
 import com.cnnp.model.db.StudentInfo;
 import com.cnnp.model.db.manager.StudentInfoManager;
 import com.cnnp.model.fragment.PinkPigFragment;
@@ -63,11 +64,15 @@ public class MainActivity extends BaseActivity {
                 studentInfo.setEnglish(50);
                 studentInfo.setTotal("120");
                 new StudentInfoManager(MainActivity.this).insert(studentInfo);
-                Log.v("###studentInfo",studentInfo.toString());
+                LogUtil.d("###studentInfo" + studentInfo.toString());
 
-                List<StudentInfo> list = new StudentInfoManager(MainActivity.this).getAll();
-                Log.v("list:",list.toString());
-//                getAppInfo();
+                //更新操作 （依据某个字段）
+                List<StudentInfo> studentInfos = new StudentInfoManager(MainActivity.this).getByString("120");
+                for(StudentInfo info : studentInfos){
+                    info.setName("李四");
+                    new StudentInfoManager(MainActivity.this).update(info);
+                }
+
             }
         });
 
