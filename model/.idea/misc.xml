@@ -4,14 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ASP/model/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/ASP/model/app/src/main/res/drawable/bt_bg.xml" value="0.1015" />
         <entry key="..\:/ASP/model/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/ASP/model/app/src/main/res/drawable/main_button_one.xml" value="0.1395" />
         <entry key="..\:/ASP/model/app/src/main/res/drawable/main_button_two.xml" value="0.1395" />
         <entry key="..\:/ASP/model/app/src/main/res/drawable/text_bg_edit.xml" value="0.1" />
         <entry key="..\:/ASP/model/app/src/main/res/layout/activity_auto_key_board.xml" value="0.20199275362318841" />
+        <entry key="..\:/ASP/model/app/src/main/res/layout/activity_blue_tooth_main.xml" value="0.4" />
         <entry key="..\:/ASP/model/app/src/main/res/layout/activity_calendar_use.xml" value="0.25364583333333335" />
         <entry key="..\:/ASP/model/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/ASP/model/app/src/main/res/layout/activity_time_type.xml" value="0.14114583333333333" />
+        <entry key="..\:/ASP/model/app/src/main/res/layout/blue_tooth_activity_main.xml" value="0.12291666666666666" />
         <entry key="..\:/ASP/model/app/src/main/res/layout/fragment_pink_pig.xml" value="0.11302083333333333" />
+        <entry key="..\:/ASP/model/app/src/main/res/layout/layout_lv_devices_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/ASP/model/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.161" />
       </map>
     </option>
   </component>

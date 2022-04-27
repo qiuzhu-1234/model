@@ -1,0 +1,7 @@
+//记录一些常用命令
+
+//下载本地数据库
+adb pull /data/data/com.cnnp.model/databases C:\Users\qiuzhu\Desktop
+
+//蓝牙  设备名   设备地址 （笔记本）
+DESKTOP-CMRB0MI   (7c:67:a2:0d:95:43)

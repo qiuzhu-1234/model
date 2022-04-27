@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:background="@drawable/main_button_two"
-            android:text="待挖掘">
+            android:text="蓝牙功能">
         </TextView>
         <TextView
             android:id="@+id/click_7"
@@ -88,7 +88,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:background="@drawable/main_button_two"
-            android:text="待挖掘">
+            android:text="开发中">
         </TextView>
         <TextView
             android:id="@+id/click_8"
@@ -98,7 +98,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:background="@drawable/main_button_two"
-            android:text="待挖掘">
+            android:text="开发中">
         </TextView>
 
     </LinearLayout>

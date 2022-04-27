@@ -18,13 +18,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         mContext = this;
         setContentView(initLayout());
 
+        initListener();
         initView();
         initDate();
+
     }
 
     protected abstract int initLayout();
+    protected  abstract void initListener();
     protected abstract void initView();
     protected  abstract void initDate();
+
 
 
 
