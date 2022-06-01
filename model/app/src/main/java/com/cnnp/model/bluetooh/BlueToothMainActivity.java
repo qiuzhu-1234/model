@@ -52,6 +52,7 @@ public class BlueToothMainActivity extends AppCompatActivity implements View.OnC
     private static final int DEVICE_BOND_NONE= 0x0B;
     private static final int DEVICE_BONDING = 0x0C;
     private static final int DEVICE_BONDED = 0x0D;
+    private static final int PERMISSIONS_REQUEST_PHONE_STATE = 0;
 
     private Button btSearch;
     private TextView tvCurConState;
@@ -75,7 +76,9 @@ public class BlueToothMainActivity extends AppCompatActivity implements View.OnC
     private BluetoothAdapter bluetoothAdapter;
     private BtBroadcastReceiver btBroadcastReceiver;
     //连接设备的UUID
-    public static final String MY_BLUETOOTH_UUID = "00001101-0000-1000-8000-00805F9B34FB";  //蓝牙通讯
+    //非手机终端的UUID：00001101-0000-1000-8000-00805f9B34FB
+    // 手机终端的UUID：00001105-0000-1000-8000-00805f9b34fb
+    public static final String MY_BLUETOOTH_UUID = "00001105-0000-1000-8000-00805f9b34fb";  //蓝牙通讯
     //当前要连接的设备
     private BluetoothDevice curBluetoothDevice;
     //发起连接的线程
@@ -116,7 +119,7 @@ public class BlueToothMainActivity extends AppCompatActivity implements View.OnC
                     break;
 
                 case CONNECT_SUCCESS:  //连接成功
-                    Log.d(TAG, "连接成功");
+                    Log.d(TAG, "连接成功，嘟嘟嘟嘟");
                     tvCurConState.setText("连接成功");
                     curConnState = true;
                     llDataSendReceive.setVisibility(View.VISIBLE);
@@ -161,6 +164,7 @@ public class BlueToothMainActivity extends AppCompatActivity implements View.OnC
                 case DEVICE_BONDED:   //已配对
                     tvCurBondState.setText("配对成功");
                     curBondState = true;
+                    llDeviceList.setVisibility(View.VISIBLE);
                     break;
             }
         }
@@ -609,39 +613,34 @@ public class BlueToothMainActivity extends AppCompatActivity implements View.OnC
      */
     @SuppressLint("MissingPermission")
     private void initDynamicAutho() {
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        // 检测PHONE_STATE 如果未授权
+//        if (ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//            //申请权限(返回数组类型，多个权限一次性申请)
+//            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE}, PERMISSIONS_REQUEST_PHONE_STATE);
+//        }else {
+//            String aaa = "duduud";
+//            LogUtil.d("电话已经授权了："+ aaa);
+//        }
 
-        if (bluetoothAdapter == null) {
-            Toast.makeText(this, "当前手机设备不支持蓝牙", Toast.LENGTH_SHORT).show();
-        } else {
-            //手机设备支持蓝牙，判断蓝牙是否已开启
-            if (bluetoothAdapter.isEnabled()) {
-                Toast.makeText(this, "手机蓝牙已开启", Toast.LENGTH_SHORT).show();
-                //开始授权
-
-
-
-            } else {
-                //蓝牙没有打开，去打开蓝牙。推荐使用第二种打开蓝牙方式
-                //第一种方式：直接打开手机蓝牙，没有任何提示
-//                bluetoothAdapter.enable();  //BLUETOOTH_ADMIN权限
-                //第二种方式：友好提示用户打开蓝牙
-                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivity(enableBtIntent);
-            }
-        }
-    }
-
-    @SuppressLint("WrongConstant")
-    public static boolean hasPermission(@NonNull Context context, @NonNull String permission) {
-        if (ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED
-                || PermissionChecker.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-            return false;
+        if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            //申请权限(返回数组类型，多个权限一次性申请)
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_PHONE_STATE);
+        }else {
+            String aaa = "duduud";
+            LogUtil.d("模糊定位已经授权了："+ aaa);
         }
 
-        return true;
-    }
+        if (ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            //申请权限(返回数组类型，多个权限一次性申请)
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS_REQUEST_PHONE_STATE);
+        }else {
+            String aaa = "duduud";
+            LogUtil.d("定位已经授权了："+ aaa);
+        }
 
+
+
+    }
 
 
     /**
