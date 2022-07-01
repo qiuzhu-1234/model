@@ -1,18 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/click_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="验证fragment">
+        </TextView>
+        <TextView
+            android:id="@+id/click_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="本地数据库">
+        </TextView>
+        <TextView
+            android:id="@+id/click_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="键盘自适应">
+        </TextView>
+        <TextView
+            android:id="@+id/click_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_one"
+            android:text="时间转换">
+        </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/click_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="时间控件">
+        </TextView>
+        <TextView
+            android:id="@+id/click_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="蓝牙功能">
+        </TextView>
+        <TextView
+            android:id="@+id/click_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="上传图片">
+        </TextView>
+        <TextView
+            android:id="@+id/click_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_two"
+            android:text="下载文件">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/click_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_three"
+            android:text="多线程下载">
+        </TextView>
+        <TextView
+            android:id="@+id/click_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_three"
+            android:text="开发中">
+        </TextView>
+        <TextView
+            android:id="@+id/click_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_three"
+            android:text="开发中">
+        </TextView>
+        <TextView
+            android:id="@+id/click_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/main_button_three"
+            android:text="开发中">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
