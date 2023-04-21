@@ -4,6 +4,7 @@ package com.cnnp.model;
 import android.view.View;
 import com.cnnp.model.activity.AutoKeyBoardActivity;
 import com.cnnp.model.activity.CalendarUseActivity;
+import com.cnnp.model.activity.CustomCameraRecordingActivity;
 import com.cnnp.model.activity.DownloadFileActivity;
 import com.cnnp.model.activity.LocalDataPoolActivity;
 import com.cnnp.model.activity.MultiThreadDownloadActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         findViewById(R.id.click_7).setOnClickListener(MainActivity.this);
         findViewById(R.id.click_8).setOnClickListener(MainActivity.this);
         findViewById(R.id.click_9).setOnClickListener(MainActivity.this);
+        findViewById(R.id.click_10).setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -68,6 +70,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.click_9:   //多线程下载文件
                 navigateTo(MultiThreadDownloadActivity.class);
+            case R.id.click_10:   //视频录制
+                navigateTo(CustomCameraRecordingActivity.class);
                 break;
         }
     }

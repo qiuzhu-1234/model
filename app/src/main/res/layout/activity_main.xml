@@ -126,7 +126,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:background="@drawable/main_button_three"
-            android:text="开发中">
+            android:text="视频录制">
         </TextView>
         <TextView
             android:id="@+id/click_11"
