@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="leftTitleText_red">
+        <item name="android:textColor">@color/leftTitle_ColorRedXing</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+</resources>
